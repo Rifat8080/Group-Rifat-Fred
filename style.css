@@ -1,5 +1,7 @@
-body {
+* {
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 #navbar {
@@ -30,4 +32,71 @@ body {
 main {
   display: grid;
   grid-template-rows: 100vh auto 300px 100px;
+}
+
+#welcome-section {
+  text-align: center;
+  background: lightslategray;
+  padding-top: 45vh;
+}
+
+#projects {
+  text-align: center;
+  background: white;
+  padding: auto;
+}
+#profile-link {
+  text-align: center;
+  background: cyan;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.circle {
+  background: rgb(36, 30, 30);
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+}
+#profile {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 18px;
+}
+
+.project-title {
+  padding: 2em;
+}
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+@media all and (max-width: 800px) {
+  #navbar {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  #navbar {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+}
+
+#navbar a {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#navbar a:last-of-type {
+  border-bottom: none;
 }
